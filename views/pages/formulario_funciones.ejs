@@ -1,0 +1,138 @@
+<form id="funciones_formulario">
+
+
+    <div class="">
+
+        <div class="formulario">
+
+            <div class="form-group px-0 d-flex margin">
+                <label for="Descripcion" class="col-4">Fecha</label>
+                <input type="date" name="Descripcion" value="<%=data.cabecera ? data.cabecera.fecha : '' %>" class="ancho campo"
+                    id="fecha" placeholder="fecha" data-valor="<%=data.cabecera ? data.cabecera.fecha : '' %>">
+            </div>
+
+            <div class="form-group px-0 d-flex margin ">
+                <label for="Descripcion" class="col-4">Cine</label>
+                <select name="cine" id="cine" onchange="cargar_peliculas_por_cine(this, 'pelicula')" class="ancho1 campo"
+                    data-valor="<%=data.cabecera ? data.cabecera.id_cine : '' %>">
+                    <option value="">
+                        Seleccione cine
+                    </option>
+                </select>
+            </div>
+
+            <div class="form-group px-0 d-flex margin ">
+                <label for="Descripcion" class="col-4">Pelicula</label>
+                <select name="pelicula" id="pelicula" class="ancho campo"
+                    data-valor="<%=data.cabecera ? data.cabecera.id_pelicula : '' %>">
+                    <option value="">
+                        Seleccione pelicula
+                    </option>
+                </select>
+            </div>
+
+        </div>
+
+        <div id="contenedor_horarios">
+
+
+
+            <div class="fila_horario" id="fila_horario"> <!-- le ponemos una clase para identificarla al borrarla -->
+
+                <div class="form-group px-0 d-flex margin">
+                    <label for="Descripcion" class="col-4">Horarios</label>
+                    <select name="horarios" id="horario" class="horario ancho campo"
+                        data-valor="<%=data.detalle ? data.detalle[0].id_horario : '' %>">
+                        <option value="">
+                            Seleccione horario
+                        </option>
+                    </select>
+                </div>
+
+
+                <div class="form-group px-0 d-flex margin">
+                    <label for="Descripcion" class="col-4">Formato</label>
+                    <select name="formato" id="formato" class="formato campo ancho1"
+                        onchange="cargar_salas_por_formato(this)" data-valor="<%=data.detalle ? data.detalle[0].id_formato : '' %>">
+                        <option value="">
+                            Seleccione formato
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group px-0 d-flex margin ">
+                    <label for="Descripcion" class="col-4">Sala</label>
+                    <select name="sala" id="sala" class="sala ancho campo" data-valor="<%=data.detalle ? data.detalle[0].id_horario : '' %>">
+                        <option value="">
+                            Seleccione sala
+                        </option>
+                    </select>
+                </div>
+
+
+            </div>
+
+            <% if(data.detalle){
+                data.detalle.forEach(function(item,index) { 
+                    if(index>0){
+            
+                %>
+
+                <div class="fila_horario"> <!-- le ponemos una clase para identificarla al borrarla -->
+
+                    <div class="form-group px-0 d-flex margin">
+                        <label for="Descripcion" class="col-4">Horarios</label>
+                        <select name="horarios" class="horario ancho campo" data-valor="<%=item.id_horario%>">
+                            <option value="">
+                                Seleccione horario
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group px-0 d-flex margin">
+                        <label for="Descripcion" class="col-4">Formato</label>
+                        <select name="formato" class="formato campo ancho1" onchange="cargar_salas_por_formato(this)"
+                            data-valor="<%=item.id_formato%>">
+                            <option value="">
+                                Seleccione formato
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group px-0 d-flex margin ">
+                        <label for="Descripcion" class="col-4">Sala</label>
+                        <select name="sala" class="sala ancho campo" data-valor="<%=item.id_sala%>">
+                            <option value="">
+                                Seleccione sala
+                            </option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn-secondary btn-block"
+                        onclick="eliminar_horario(this.parentNode)">Eliminar</button>
+
+                </div>
+
+                <% }
+            
+            });
+         } %> 
+
+
+        </div>
+
+    </div>
+
+    <button type="button" class="btn btn-secondary btn-block" onclick="agregar_horario()">Agregar horario</button>
+
+    <div class="botones_formulario">
+        <button type="button" class="btn btn-secondary btn-block"
+            onclick="limpiar_campos('.campo'); nueva_funcion()">Nuevo</button>
+        <!-- limpiar campos limpia los valores de los input de la clase campo  y a su vez nuevo usuario le setea un valor 0 a un input oculto para que cuando demos guardar se sepa que es un nuevo usuario y que no es una modificacion -->
+        <button type="button" class="btn btn-secondary btn-block" onclick="guardar_funcion()">Guardar</button>
+        <!-- aca hacemos la logica de preguntar que valor tiene el input oculto , si es cero , entonces es POST y es el id del usuario entonces es un PUT -->
+        <input type="hidden" id="id_funcion" value="<%=data.cabecera ? data.cabecera.id : '0' %>">
+    </div>
+
+</form>

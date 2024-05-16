@@ -1,0 +1,36 @@
+<%-include('../partials/head')-%>
+
+    <%-include('../partials/navbar')-%>
+
+
+
+        <div class="table_container_general">
+            <div>
+                <table id="datatable_funciones" class="table table-striped align-middle table-row-dashed fs-6 gy-5">
+                    <thead>
+                        <tr class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0 tamaño_letra ">
+                            <th>Fecha</th>
+                            <th>Cine</th>
+                            <th>Pelicula</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 fw-semibold tamaño_letra">
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <div id="formulario_planilla_funciones">
+
+                <%-include('formulario_funciones',{data:{}})%> 
+                <!-- el data lo tengo vacio para que exista esa variable en el ejs-->
+
+            </div>
+
+        </div>
+
+
+        <script src="./js/administracion_funciones.js"></script>
+        <script src="./js/funciones_generales.js"></script>

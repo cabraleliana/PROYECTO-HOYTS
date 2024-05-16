@@ -1,0 +1,16 @@
+<div>
+    <h2 class="subtitulo">PELICULAS</h2>
+    <div class="peliculas">
+        <%data.forEach(movie=>{%>
+            <div style="width: 12rem;">
+                <img src="<%=movie.url_imagen%>" class="card-img-top imagenes" alt="...">
+                <h5 class="letra-peliculas">
+                    <%=movie.nombre%>
+                </h5>
+            </div>
+            <%})%>
+    </div>
+
+</div>
+
+<script src="../js/peliculas.js"></script>

@@ -1,0 +1,55 @@
+<div class="selecion-cines mt-2">
+    <div>
+        <div>
+            <select id="select_cines" class="seleccion bold" onchange="cargar_peliculas_por_cine(this,'select_movies')">
+                <option value="">
+                    Seleccione un cine
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <select id="select_movies" class="seleccion bold" onchange="cargar_fechas_por_pelicula_cine(this)">
+                <option value="">
+                    Seleccione una pelicula
+                </option>
+            </select>
+        </div>
+    </div>
+    
+</div>
+
+
+<div id="contenedor_funciones" class="contenedor_funciones">
+
+   
+    
+</div>
+
+<div class="oculto" id="container_oculto">
+    
+    <div class="eleccion_funciones">
+
+        <div>
+            
+            
+                <div id="contenedor_funciones_totales" class="contenedor_funciones_totales">
+                    
+                    
+                    
+                </div>
+                
+                <button type="button" class="botones mt-2 margin_left">COMPRAR</button>
+        </div>
+        <div class="margin">
+            
+            <%-include('../pages/descripcion_pelicula')-%>
+        </div>
+
+    
+    </div>
+
+
+</div>

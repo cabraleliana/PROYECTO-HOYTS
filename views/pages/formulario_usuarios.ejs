@@ -1,0 +1,42 @@
+<form id="users">
+
+    <div class="form-group px-0 d-flex justify-content-between align-items-center">
+        <label for="Descripcion" class="col-4">Nombre</label>
+        <input type="text" name="Descripcion" value="<%=data[0] ? data[0].nombre : '' %>" class="form-control campo" id="name"
+            placeholder="Nombre">
+
+    </div>
+    <div class="form-group px-0 d-flex justify-content-center align-items-center">
+        <label for="precio" class="col-4">Email</label>
+        <input type="text" name="precio" value="<%=data[0] ? data[0].email : '' %>" class="form-control campo" id="email"
+            placeholder="Email">
+    </div>
+    <div class="form-group px-0 d-flex justify-content-center align-items-center">
+        <label for="sexo" class="col-4">Apellido</label>
+        <input type="text" name="precio" value="<%=data[0] ? data[0].apellido : '' %>" class="form-control campo" id="apellido"
+            placeholder="Apellido">
+    </div>
+    <div class="form-group px-0 d-flex justify-content-center align-items-center">
+        <label for="sexo" class="col-4">Celular</label>
+        <input type="text" name="precio" value="<%=data[0] ? data[0].celular : '' %>" class="form-control campo" id="celular"
+            placeholder="Celular">
+    </div>
+    <div class="form-group px-0 d-flex justify-content-center align-items-center">
+        <label for="sexo" class="col-4">Complejo</label>
+        <input type="text" name="precio" value="<%=data[0] ? data[0].complejo_habitual : '' %>" class="form-control campo" id="complejo_habitual"
+            placeholder="Complejo_habitual">
+    </div>
+    <div class="form-group px-0 d-flex justify-content-center align-items-center">
+        <label for="sexo" class="col-4">Genero</label>
+        <input type="text" name="precio" value="<%=data[0] ? data[0].genero : '' %>" class="form-control campo" id="genero"
+            placeholder="Genero">
+    </div>
+    <div class="d-flex">
+        <button type="button" class="btn btn-secondary btn-block" onclick="limpiar_campos('.campo'); nuevo_usuario()">Nuevo</button>
+        <!-- limpiar campos limpia los valores de los input de la clase campo  y a su vez nuevo usuario le setea un valor 0 a un input oculto para que cuando demos guardar se sepa que es un nuevo usuario y que no es una modificacion -->
+        <button type="button" class="btn btn-secondary btn-block" onclick="guardar_usuario()" >Guardar</button>
+        <!-- aca hacemos la logica de preguntar que valor tiene el input oculto , si es cero , entonces es POST y es el id del usuario entonces es un PUT -->
+        <input type="hidden" id="id_usuario" value="<%=data[0] ? data[0].id : '0' %>">
+    </div>
+
+</form>

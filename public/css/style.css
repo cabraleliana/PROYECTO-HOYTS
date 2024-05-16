@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    background-color: black;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: 60px;
+    width: 100%;
+}
+
+
+.letra{
+    margin-left: 15px;
+    color:#999;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "GothamHTFUltra";
+    
+    
+}
+
+.letra:hover{
+    color: white;
+}
+
+.hoyts{
+    color: white;
+    margin-left: 30px;
+    font-size: 20px;
+
+}
+
+i{
+    color: #999;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.carrousel{
+    height: 100vh;
+}
+
+.imagen{
+    height: 100%;   
+}
+
+.contenedor-imagen{
+    width: 100vh;
+    height: 70vh;
+}
+
+.nav-login{
+    background-color:#282828;
+    padding-left: 20px;
+    padding: 20px;
+}
+
+.login{
+    color: white;
+    font-size: 25px;
+    line-height: 21px;
+    font-family: "GothamHTFUltra";
+    color: #d6d4d4;
+    font-weight: bold;
+}
+
+.container-login{
+    display: flex;
+    margin-left: 70px;
+}
+
+.container-login-general{
+    display: flex;
+    background-color:#d6d4d4 ;
+    height: 100vh;
+}
+
+
+.bold{
+    font-weight: bold;
+}
+
+.botones{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 13%;
+    padding: 10px;    
+}
+
+.promociones{
+    margin-left: 270px;
+    z-index: 1;
+    height: 100vh;
+    margin-top: -50px;
+}
+
+.selecion-cines{
+
+    display: inline-flex;
+    margin-left: 50px;
+}
+
+.seleccion{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    width: 300px;
+    border-radius: 7px;
+}
+
+.contenedor-carrousel{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.bold{
+    font-weight: bold;
+
+}
+
+.peliculas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.letra-peliculas{
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+.imagenes{
+    width: 190px;
+	height: 280px;
+}
+
+.subtitulo{
+    margin-left: 70px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+.dropdown{
+    position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+
+  .separar-divs{
+    width: 100%;
+    
+    
+  }
+
+  .input{
+    height: 43px;
+    font-size: 12px;
+    background: #fff;
+    border: 0;
+    padding: 0 10px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    font-family: "GothamHTFLight";
+    font-weight: normal;
+    text-decoration: none;
+
+  }
+
+  .margin{
+    margin-left: 5px;
+  }
+
+
+  .promociones_benner_registrarse{
+    margin-left: 180px;
+    z-index: 1;
+    height: 100vh;
+    margin-top: -50px;
+}
+
+
+.boton_registrarse{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px;    
+    width: 200px;
+}
+
+.select_genero{
+    height: 43px;
+    background: #f8f8f8;
+    padding: 0 25px;
+    border: none;
+}
+
+
+.bold_registrarse{
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+input.no-hover:hover,
+input.no-hover:active,
+input.no-hover:focus {
+  outline: none; 
+  box-shadow: none;
+  border:none;
+}
+
+.div_uno{
+    width: 45%;
+}
+
+.footer{
+    justify-content: space-around;
+    background-color: #262626;
+}
+
+.footer_divs{
+    margin-top: 20px;
+}
+
+.letras{
+    color: #999;
+    font-size: 14px;
+
+}
+
+.letras_bold{
+    font-weight: bold;
+    color: #999;
+}
+
+.imagen{
+    margin-left: 20px;
+}
+
+.outline{
+    text-decoration: none;
+}
+
+
+.table_container_general{
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-around;
+   
+}
+
+
+.tamaño_letra{
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+
+.tamaño_letra_table{
+    font-size: 13px;
+    
+}
+
+
+#datatable_usuarios_wrapper .page-item.active .page-link {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Cambiar el color del texto del botón de paginación activo a blanco */
+#datatable_usuarios_wrapper .page-item.active .page-link {
+    color: #ffffff !important;
+}
+
+#datatable_usuarios_wrapper .page-item:focus .page-link,
+#datatable_usuarios_wrapper .page-item.active .page-link:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+
+#datatable_peliculas_wrapper .page-item.active .page-link {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Cambiar el color del texto del botón de paginación activo a blanco */
+#datatable_peliculas_wrapper .page-item.active .page-link {
+    color: #ffffff !important;
+}
+
+#datatable_peliculas_wrapper .page-item:focus .page-link,
+#datatable_peliculas_wrapper .page-item.active .page-link:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+#datatable_funciones_wrapper .page-item.active .page-link {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Cambiar el color del texto del botón de paginación activo a blanco */
+#datatable_funciones_wrapper .page-item.active .page-link {
+    color: #ffffff !important;
+}
+
+#datatable_funciones_wrapper .page-item:focus .page-link,
+#datatable_funciones_wrapper .page-item.active .page-link:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+.ancho{
+    width: 200px;
+}
+
+.ancho1{
+    width: 200px;
+}
+
+
+.margin{
+    margin-bottom: 10px;
+}
+
+
+.botones_formulario{
+    margin-top: 10px;
+    display: inline;
+
+}
+
+
+
+.formulario{
+    margin-bottom: 50px;
+}
+
+.contenedor_funciones{
+    width: 100%;
+    margin-top: 23px;
+    margin-left: 63px;
+    display: flex;
+    
+
+}
+
+.contenedor_funciones_totales{
+    width: 100%;
+    margin-top: 23px;
+    margin-left: 10px;
+}
+
+
+.salas_funciones{
+    
+    margin-top: 10px;
+
+}
+.span{
+    font-size: 13px;
+}
+
+.white{
+    color: white;
+}
+
+.left{
+    margin-left: 10px;
+}
+
+.top{
+    margin-top: 10px;
+}
+
+.fecha{
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 1px solid;
+    border-color:grey;
+    width: 100px;
+    color: grey;
+    padding-left: 15px;
+    cursor: pointer;
+
+
+}
+
+.seleccionada{
+    background-color: white;
+}
+
+.titulo{
+    background-color:#605c5c;
+    padding: 8px;
+    padding-bottom: 3px;
+    width: 550px;
+}
+
+
+.horarios_cine{
+    background-color: black;
+    padding: 8px;
+    padding-bottom: 20px;
+    width: 550px;
+    margin-bottom: 5px;
+}
+
+.eleccion_funciones{
+    width: 90%;
+    background-color: rgba(128, 128, 128, 0.124);
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.oculto{
+
+
+    display: none;
+   
+    
+}
+
+.container_oculto{
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px;
+    
+}
+
+.tamaño_imagen{
+    margin-top: 15px;
+    width: 220px;
+    height: 300px;
+    margin-left: 10px;
+}
+
+.tamaño_imagen_2{
+    margin-top: 15px;
+    width: 300px;
+    height: 200px;
+    margin-left: 15px;
+}
+.margin_left{
+    margin-left: 15px;
+}
+.parrafo{
+    font-size: 10px;
+    margin-left: 10px;
+}

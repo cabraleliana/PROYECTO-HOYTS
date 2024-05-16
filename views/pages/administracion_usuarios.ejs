@@ -1,0 +1,49 @@
+<%-include('../partials/head')-%>
+
+    <%-include('../partials/navbar')-%>
+
+
+
+        <div class="table_container_general">
+            <div>
+                <table id="datatable_usuarios" class="table table-striped align-middle table-row-dashed fs-6 gy-5">
+                    <thead>
+                        <tr class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0 tamaño_letra ">
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Apellido</th>
+                            <th>Celular</th>
+                            <th>Complejo_habitual</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 fw-semibold tamaño_letra">
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <div id="formulario_planilla_usuarios">
+
+                <%-include('formulario_usuarios',{data:[]})%> 
+                <!-- el data lo tengo vacio para que exista esa variable en el ejs-->
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="./js/administracion_usuarios.js"></script>
